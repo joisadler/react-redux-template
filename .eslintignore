@@ -1,0 +1,4 @@
+src/serviceWorker.js
+src/reportWebVitals.js
+src/**/__tests__/**
+node_modules/**
