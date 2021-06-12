@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from './modules/common/header/Header';
+import Footer from './modules/common/footer/Footer';
 
 import styles from './app.module.scss';
 
@@ -26,6 +27,7 @@ const App = () => {
           </Suspense>
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 };

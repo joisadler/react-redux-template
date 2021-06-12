@@ -1,13 +1,19 @@
 @import 'styles/settings.scss';
 
 .container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  height: calc(100vh - #{$header_height} - #{$footer_height} - 4rem);
+  border: 1px solid $whisper;
+  border-radius: 0.5rem;
 }
 
 .heading {
   font-size: 2rem;
+  text-transform: uppercase;
   text-align: center;
 }
 

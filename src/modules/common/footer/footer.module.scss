@@ -1,0 +1,24 @@
+@import 'styles/settings.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $footer_height;
+  width: 100%;
+  border: 1px solid $whisper;
+  border-radius: 0.5rem;
+  margin-block-start: 1rem;
+  padding: 1rem;
+}
+
+.text {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.link {
+  @extend .text;
+  text-decoration: none;
+  color: $blue;
+}

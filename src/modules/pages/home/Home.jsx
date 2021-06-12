@@ -6,7 +6,7 @@ import styles from './home.module.scss';
 
 const Home = ({ entities }) => {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <h1 className={styles.heading}>Welcome to the entities app!</h1>
       <p className={styles.info}>
         At the moment there are {entities.length}{' '}
@@ -15,7 +15,7 @@ const Home = ({ entities }) => {
         </Link>
         .
       </p>
-    </div>
+    </main>
   );
 };
 

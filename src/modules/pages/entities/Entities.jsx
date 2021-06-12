@@ -8,10 +8,13 @@ import styles from './entities.module.scss';
 const Entities = ({ entities }) => {
   return (
     <main className={styles.container}>
-      {entities.map((entity) => {
-        const { name, id } = entity;
-        return <EntityCard key={id} name={name} />;
-      })}
+      <section className={styles.controls}>controls section</section>
+      <section className={styles.cards}>
+        {entities.map((entity) => {
+          const { name, id } = entity;
+          return <EntityCard key={id} name={name} />;
+        })}
+      </section>
     </main>
   );
 };
