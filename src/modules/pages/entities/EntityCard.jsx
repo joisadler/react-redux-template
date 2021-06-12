@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './entities_page.module.scss';
+import styles from './entities.module.scss';
 
 const EntityCard = ({ name }) => {
   return (

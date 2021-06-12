@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import EntityCard from './EntityCard';
 
-import styles from './entities_page.module.scss';
+import styles from './entities.module.scss';
 
-const EntitiesPage = ({ entitiesToShow }) => {
+const Entities = ({ entities }) => {
   return (
     <main className={styles.container}>
-      {entitiesToShow.map((entity) => {
+      {entities.map((entity) => {
         const { name, id } = entity;
         return <EntityCard key={id} name={name} />;
       })}
@@ -16,8 +16,8 @@ const EntitiesPage = ({ entitiesToShow }) => {
   );
 };
 
-EntitiesPage.propTypes = {
-  entitiesToShow: PropTypes.arrayOf(PropTypes.object).isRequired,
+Entities.propTypes = {
+  entities: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default EntitiesPage;
+export default Entities;
