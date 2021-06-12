@@ -5,7 +5,7 @@ import Header from './modules/common/header/Header';
 
 import styles from './app.module.scss';
 
-const Home = lazy(() => import('./modules/pages/home/Home'));
+const Home = lazy(() => import('./modules/pages/home/home_container'));
 const Entities = lazy(() =>
   import('./modules/pages/entities/entities_container')
 );
