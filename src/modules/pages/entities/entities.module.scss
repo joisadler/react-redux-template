@@ -14,6 +14,26 @@
   border-radius: 0.5rem;
 }
 
+.input {
+  height: 2rem;
+  width: 10rem;
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 1rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+  border: 1px solid $whisper;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.cards_wrapper {
+  width: 100%;
+  min-height: calc(100vh - (#{$header_height} * 2) - #{$footer_height} - 5rem);
+  border: 1px solid $whisper;
+  border-radius: 0.5rem;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -21,8 +41,6 @@
   grid-gap: 1rem;
   width: 100%;
   padding: 1rem;
-  border: 1px solid $whisper;
-  border-radius: 0.5rem;
 }
 
 .card {

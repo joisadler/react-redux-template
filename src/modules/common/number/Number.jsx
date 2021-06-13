@@ -6,7 +6,7 @@ import styles from './number.module.scss';
 const Number = ({ number }) => {
   const [counter, setCounter] = useState(0);
 
-  const delay = 1000 / number;
+  const delay = Math.min(1000 / number, 100);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
