@@ -22,9 +22,23 @@
   text-align: center;
 }
 
-.link {
-  font-size: 1.5rem;
+.number {
+  font-weight: bold;
+}
+
+.action {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
-  color: blue;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 

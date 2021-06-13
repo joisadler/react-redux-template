@@ -7,6 +7,7 @@
 
 .controls {
   width: 100%;
+  height: $header_height;
   margin-block-end: 1rem;
   padding: 1rem;
   border: 1px solid $whisper;
@@ -33,4 +34,8 @@
   border: 1px solid $whisper;
   border-radius: 0.5rem;
   background-color: $alabaster;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
