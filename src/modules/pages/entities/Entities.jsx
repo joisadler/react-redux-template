@@ -40,32 +40,48 @@ const Entities = ({ entities }) => {
     );
   };
 
+  const renderResultsInfo = () => {
+    const number = entitiesToShow.length === 0 ? 'no' : entitiesToShow.length;
+    const toBeForm = number === 1 ? 'is' : 'are';
+    const ending = number === 1 ? '' : 's';
+
+    return (
+      <h1 className={styles.results_info}>
+        There {toBeForm} <span className={styles.number}>{number}</span> result
+        {ending}
+      </h1>
+    );
+  };
+
   return (
     <main className={styles.container}>
-      <section className={styles.controls}>
-        <label className={styles.label}>
-          Search entity:
-          <input
-            type="text"
-            className={styles.input}
-            value={searchQuery}
-            onChange={handleSearch}
-            placeholder="name"
-          />
-        </label>
-        <label className={styles.label}>
-          Sort by date:
-          <select
-            className={styles.input}
-            name="dateOrder"
-            id="dateOrder"
-            value={dateOrder}
-            onChange={handleSortByDate}
-          >
-            <option value="desc">Newest first</option>
-            <option value="asc">Oldest first</option>
-          </select>
-        </label>
+      <section className={styles.controls_bar}>
+        <div className={styles.controls}>
+          <label className={styles.label}>
+            Search entity:
+            <input
+              type="text"
+              className={styles.input}
+              value={searchQuery}
+              onChange={handleSearch}
+              placeholder="name"
+            />
+          </label>
+          <label className={styles.label}>
+            Sort by date:
+            <select
+              className={styles.input}
+              name="dateOrder"
+              id="dateOrder"
+              value={dateOrder}
+              onChange={handleSortByDate}
+            >
+              <option value="desc">Newest first</option>
+              <option value="asc">Oldest first</option>
+            </select>
+          </label>
+        </div>
+        {renderResultsInfo()}
       </section>
       <div className={styles.cards_wrapper}>
         <section className={styles.cards}>

@@ -1,17 +1,31 @@
 @import 'styles/settings.scss';
+@import 'styles/mixins.scss';
 
 .container {
   width: 100%;
   margin: 0 auto;
 }
 
-.controls {
+.controls_bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: $header_height;
+  min-height: $header_height;
   margin-block-end: 1rem;
   padding: 1rem;
   border: 1px solid $whisper;
   border-radius: 0.5rem;
+}
+
+.label {
+  display: inline-block;
+  @include breakpoint(mobile) {
+    &:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+  }
 }
 
 .input {
@@ -28,11 +42,30 @@
   background-color: $white;
 }
 
+.results_info {
+  font-size: 1rem;
+  font-weight: normal;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    text-align: center;
+    margin-block-end: 0;
+  }
+}
+
+.number {
+  font-weight: bold;
+}
+
 .cards_wrapper {
   width: 100%;
   min-height: calc(100vh - (#{$header_height} * 2) - #{$footer_height} - 5rem);
   border: 1px solid $whisper;
   border-radius: 0.5rem;
+
+  @include breakpoint(mobile) {
+    min-height: unset;
+  }
 }
 
 .cards {
