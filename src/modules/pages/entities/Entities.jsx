@@ -87,7 +87,7 @@ const Entities = ({ entities }) => {
         <section className={styles.cards}>
           {entitiesToShow.map((entity) => {
             const { name, id } = entity;
-            return <EntityCard key={id} name={name} />;
+            return <EntityCard key={id} name={name} id={id} />;
           })}
         </section>
       </div>

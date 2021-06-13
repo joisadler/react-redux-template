@@ -10,6 +10,7 @@ const Home = lazy(() => import('./modules/pages/home/home_container'));
 const Entities = lazy(() =>
   import('./modules/pages/entities/entities_container')
 );
+const Entity = lazy(() => import('./modules/pages/entity/entity_container'));
 
 const App = () => {
   return (
@@ -21,6 +22,14 @@ const App = () => {
             <Entities />
           </Suspense>
         </Route>
+        <Route
+          path="/entity/:id"
+          render={(props) => (
+            <Suspense fallback={<div>Loading...</div>}>
+              <Entity {...props} />
+            </Suspense>
+          )}
+        />
         <Route path="/">
           <Suspense fallback={<div>Loading...</div>}>
             <Home />

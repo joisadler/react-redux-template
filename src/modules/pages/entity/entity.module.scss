@@ -1,0 +1,20 @@
+@import 'styles/settings.scss';
+
+.container {
+  width: 100%;
+  height: calc(100vh - #{$header_height} - #{$footer_height} - 4rem);
+  padding: 1rem;
+  border: 1px solid $whisper;
+  border-radius: 0.5rem;
+}
+
+.name {
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+  font-size: 1.5rem;
+}
+
+.link {
+  color: $blue;
+  text-decoration: none;
+}
